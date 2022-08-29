@@ -14,16 +14,19 @@
     <header>
         <img src="img/logo.svg" alt="">
     </header>
-    <main
-        <form id="txtEncript">
-            <textarea form="txtEncript" name="texto" id="texto" cols="30" rows="5" placeholder="Ingrese texto aquí"></textarea>
-            <span>Sólo letras minúsculas y sin acentos.</span>
-            <button id="bEncriptar" class="en" type="submit">Enciptar</button>
-            <button class="des" type="submit">Desencriptar</button>
+    <main>
+        <form id="txtEncript" onsubmit="return false;">
+            <textarea form="txtEncript" class="in" name="texto" id="texto" placeholder="Ingrese texto aquí"></textarea>
+            <span class="alerta">Sólo letras minúsculas y sin acentos.</span>
+            <section class="in">
+                <button id="bEncriptar" class="en" type="submit">Enciptar</button>
+                <button id="bDesencrpitar" class="des" type="submit">Desencriptar</button>
+            </section>
         </form>
-        <section>
-            <h3>Ningún mensaje fue encontrado.</h3>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+        <section class="out">
+            <textarea class="textImg" name="out" id="out" readonly="readonly"></textarea>
+            <span class="textFound"><strong>Ningún texto encontrado</strong><br><br>Ingresa el texto que desees encriptar o desencriptar.</span>
+            <button type="submit" onclick="copyToClipBoard()">Copiar</button>
         </section>
     </main>
     <footer>
